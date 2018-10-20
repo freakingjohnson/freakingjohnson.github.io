@@ -13,6 +13,12 @@
   z-index: 1000;
 }
 
+@media screen and (max-width: 420px) {
+  #flyout {
+    width: 70vw;
+  }
+}
+
 #flyout .links {
   cursor: pointer;
 }
@@ -65,12 +71,65 @@
   top: 10px;
   cursor: pointer;
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
 }
 
 .App {
   background-color: #42536d;
-  height: 1000vh;
+}
+
+.imagediv {
+  position: absolute;
+  top: -100000px;
+  right: 100000px;
+  width: 100px;
+}
+
+.element-name {
+  text-align: center;
+}
+
+.outer-container {
+  position: relative;
+  width: 75vw;
+  margin-left: 10%;
+  margin-right: 15%;
+  padding: 10px;
+}
+
+.dark {
+  background-color: darkslategray;
+}
+
+.light {
+  background-color: slategray;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  margin-bottom: 10px;
+}
+
+.proj-pic {
+  margin-right: 10px;
+  padding: 0;
+  height: 275px;
+}
+
+.self {
+  margin-right: 10px;
+  margin-top: 20px;
+  padding: 0;
+  max-height: 200px;
+}
+
+@media screen and (max-width: 420px) {
+  .self {
+    display: none;
+  }
 }
 
 .home-container {
@@ -105,6 +164,12 @@
   height: 50px;
 }
 
+@media screen and (max-width: 420px) {
+  .white-box {
+    width: 50vw;
+  }
+}
+
 .social {
   list-style-type: none;
   padding: 0;
@@ -115,22 +180,25 @@
   padding: 10px;
 }
 
-.element-name {
-  text-align: center;
+p {
+  color: #fff;
 }
 
-.about-container {
-  position: absolute;
-  padding: 30px 20vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (max-width: 420px) {
+  p h5 {
+    display: none;
+  }
 }
 
-.self {
+p img {
+  height: 10vh;
   margin-right: 10px;
-  padding: 0;
-  height: 40vh;
+}
+
+@media screen and (max-width: 420px) {
+  p img {
+    display: none;
+  }
 }
 
 body {

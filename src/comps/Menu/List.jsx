@@ -5,9 +5,9 @@ import { animateScroll as scroll, scroller } from 'react-scroll'
 
 class List extends React.Component {
 
-  componentDidMount() {
-    scroll.scrollToTop()
-  }
+  // componentDidMount() {
+    // scroll.scrollToTop()
+  // }
   render() {
     const {
       menuOpen, toggleMenu,
@@ -50,6 +50,30 @@ class List extends React.Component {
           <h2>
             <FontAwesomeIcon icon="user-circle" />&nbsp;
               About
+          </h2>
+          </div>
+          <div
+            className='links'
+            onClick={()=> scroller.scrollTo('portfolio', {
+              smooth:true
+            }
+            )}
+          >
+          <h2>
+            <FontAwesomeIcon icon="journal-whills" />&nbsp;
+              Portfolio
+          </h2>
+          </div>
+          <div
+            className='links'
+            onClick={()=> scroller.scrollTo('contact', {
+              smooth:true
+            }
+            )}
+          >
+          <h2>
+            <FontAwesomeIcon icon="comments" />&nbsp;
+              Contact
           </h2>
           </div>
         </div>

@@ -1,11 +1,47 @@
 import React from 'react';
 import { Element } from 'react-scroll'
+import CrossfadeImage from 'react-crossfade-image'
 
-const about = () => <Element name='about'>
-    <h2 className='element-name'>-About-</h2>
-    <div className='about-container'>
-        <img src={require('../../assets/download.png')} alt="" className='self' />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id sodales dolor, eget facilisis erat. Ut vulputate commodo aliquam. Aenean et magna id dolor porta eleifend eget vel eros. Duis placerat, dolor aliquam condimentum sollicitudin, dolor neque iaculis massa, id viverra velit nulla ac libero. Mauris non mi sapien. Integer sollicitudin neque vel gravida posuere. Vivamus id vehicula nibh, sed porta velit. Aliquam et mauris nunc. Donec eu felis non eros finibus tincidunt cursus a dolor. Fusce in molestie ante. Nam a dolor non lacus blandit posuere lacinia vel est. Aliquam sed metus blandit, scelerisque nisi et, condimentum libero. Aliquam viverra hendrerit ex. Ut tempus rhoncus nisl ultricies vehicula.</p>
-    </div>
-</Element>
+class about extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            selfiepic: require('../../assets/selfie1.png'),
+            style: { minWidth: '200px', height: 'auto' }
+        }
+    }
+    mouseEvent = (e) => {
+        let str = e.substring(0, e.length - 1)
+        this.setState({
+            [`${str}pic`]: require(`../../assets/${e}.png`)
+        })
+        console.log(this.state)
+    }
+    render() {
+        return (
+            <Element name='about'>
+                <div className='outer-container light'>
+                    <h2 className='element-name'>-About-</h2>
+                    <div className='container'>
+                        <span
+                            className='self'
+                            onMouseOver={() => this.mouseEvent('selfie2')}
+                            onMouseOut={() => this.mouseEvent('selfie1')}
+                        >
+                            <CrossfadeImage
+                                src={this.state.selfiepic}
+                                alt=""
+                                style={this.state.style}
+                            />
+                        </span>
+                        <p style={{ color: 'black' }}>
+                            I love to learn and love to code. I am always looking for new projects to work on in order to gain experience and learn new technologies. 
+                        </p>
+                    </div>
+                </div>
+            </Element>
+        )
+    }
+}
+
 export default about
