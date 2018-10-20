@@ -25,9 +25,11 @@
 }
 
 .proj-pic {
+    margin-top: 20px;
     margin-right: 10px;
     padding: 0;
     height: 275px;
+    border: 4px solid black; 
 }
 
 .self {
@@ -91,4 +93,33 @@ p {
             display: none;
         }
     }
+}
+
+a {
+    color: black
+}
+
+.gittyup {
+    position: relative;
+    right: 150px;
+    top: 220px;
+    height: 48px;
+    :hover{
+        color: darkslategray
+    }
+}
+
+.gittydown {
+    position: relative;
+    left: 140px;
+    top: 220px;
+    z-index: 5;
+    height: 48px;
+    :hover{
+        color: darkslategray
+    }
+}
+
+.white {
+    color: white;
 }

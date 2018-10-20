@@ -9,7 +9,7 @@ class Portfolio extends React.Component {
             buildpic: require('../../assets/build1ss.png'),
             bloggyblogpic: require('../../assets/bloggyblog1ss.png'),
             bloggypic: require('../../assets/bloggy1ss.png'),
-            style: { img: {maxHeight: '275px', maxWidth: '235px', marginTop: '20px', marginBottom: '10px'}}
+            style: { img: { maxHeight: '275px', maxWidth: '235px', marginBottom: '10px' } }
         }
     }
     mouseEvent = (e) => {
@@ -30,6 +30,7 @@ class Portfolio extends React.Component {
                     <div className='container'>
                         <p>Developed as a group project for DevMountain. A social media/classifieds app to connect independent laborers with clients. API allows to create profile either as a "pro" or a "user", pros can create a profile to showcase their work and provide information as well as set up Stripe to collect credit card payments.
                             <br />
+
                             <h5>Technologies used:</h5>
                             <img src={require('../../assets/react-logo.png')} alt="" />
                             <img src={require('../../assets/node.png')} alt="" />
@@ -47,10 +48,12 @@ class Portfolio extends React.Component {
                                 style={this.state.style.img}
                             />
                         </a>
+                        <a href="https://github.com/freakingjohnson/unlicensed" target="_blank" rel="noopener noreferrer" className="gittyup"><i className="fab fa-3x fa-github"></i></a>
                     </div>
                     <br />
                     <h4 className='element-name'>BloggyBlog2</h4>
                     <div className='container'>
+                        <a href="https://github.com/freakingjohnson/blogv2" target="_blank" rel="noopener noreferrer" className="gittydown white"><i className="fab fa-3x fa-github"></i></a>
                         <a href="http://165.227.53.23:3006/" target="_blank" rel="noopener noreferrer"
                             className='proj-pic'
                             onMouseOver={() => this.mouseEvent('bloggyblog2')}
@@ -59,7 +62,7 @@ class Portfolio extends React.Component {
                                 src={this.state.bloggyblogpic}
                                 alt=""
                                 style={this.state.style.img}
-                                />
+                            />
                         </a>
                         <p>Blog app with API to create/update blogs, add images to gallery, with redux for state management and a simple socket.io chatboard. Rebuild of personal project done at DevMountain. (No auth set up for admin).
                             <br />
@@ -95,6 +98,7 @@ class Portfolio extends React.Component {
                                 style={this.state.style.img}
                             />
                         </a>
+                        <a href="https://github.com/freakingjohnson/bloggyblog" target="_blank" rel="noopener noreferrer" className="gittyup white"><i className="fab fa-3x fa-github"></i></a>
                     </div>
                 </div>
             </Element>

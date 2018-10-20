@@ -7,7 +7,7 @@ class about extends React.Component {
         super()
         this.state = {
             selfiepic: require('../../assets/selfie1.png'),
-            style: { minWidth: '200px', height: 'auto' }
+            style: { width: '200px', height: 'auto' }
         }
     }
     mouseEvent = (e) => {
