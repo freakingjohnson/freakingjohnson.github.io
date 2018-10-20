@@ -8,6 +8,6 @@ const MenuButton = (props) => (
       d={ICON.icon.before}
     />
   </svg>
-)
+) 
 
 export default MenuButton;
