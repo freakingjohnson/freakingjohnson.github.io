@@ -1,0 +1,58 @@
+#flyout {
+    padding: 10px 0px 10px 50px;
+    width: 20vw;
+    height: 100%;
+    background-color: rgba(49, 55, 66, 0.9);
+    position: fixed;
+    left: -10px;
+    transition: transform 0.4s cubic-bezier(0.5, 0, 0.83, 0.67);
+    overflow: hidden;
+    z-index: 1000;
+    .links {
+        cursor: pointer;
+        h2 {
+            color: black;
+            margin-left: 15px;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+#overlay {
+    top: 0;
+    left: 0;
+    transition: transform 0.6s cubic-bezier(0.5, 0, 0.83, 0.67);
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.1;
+    z-index: 999;
+}
+
+#flyout.hide,
+#overlay.hide {
+    transform: translate3d(-100vw, 0, 0);
+}
+
+#flyout.show,
+#overlay.show {
+    transform: translate3d(0vw, 0, 0);
+    overflow: hidden;
+}
+
+.menu-button {
+    margin-bottom: 20px;
+    width: 33px;
+    height: 33px;
+    border-radius: 8px;
+    outline: none;
+    right: 25px;
+    top: 10px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+}
