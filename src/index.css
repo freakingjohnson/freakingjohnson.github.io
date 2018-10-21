@@ -89,12 +89,20 @@
   text-align: center;
 }
 
+.prjcolor {
+  color: #4286f4;
+}
+
 .outer-container {
   position: relative;
-  width: 75vw;
-  margin-left: 10%;
-  margin-right: 15%;
-  padding: 10px;
+  width: inherit;
+  padding: 10px 20vh;
+}
+
+@media screen and (max-width: 420px) {
+  .outer-container {
+    padding: 10px 0;
+  }
 }
 
 .dark {
@@ -109,16 +117,41 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: inherit;
-  margin-bottom: 10px;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+}
+
+.left {
+  padding-left: 3vw;
+}
+
+.right {
+  padding-right: 10vw;
+}
+
+.btmln {
+  border: 1px solid #42536d;
 }
 
 .proj-pic {
-  margin-top: 20px;
   margin-right: 10px;
-  padding: 0;
+  margin-left: -20px;
   height: 275px;
   border: 4px solid black;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 420px) {
+  .proj-pic {
+    margin-left: 0;
+  }
 }
 
 .self {
@@ -182,23 +215,23 @@
   padding: 10px;
 }
 
-p {
+.p {
   color: #fff;
 }
 
 @media screen and (max-width: 420px) {
-  p h5 {
+  .p h5 {
     display: none;
   }
 }
 
-p img {
+.p img {
   height: 10vh;
   margin-right: 10px;
 }
 
 @media screen and (max-width: 420px) {
-  p img {
+  .p img {
     display: none;
   }
 }
@@ -228,6 +261,12 @@ a {
 
 .gittydown :hover {
   color: darkslategray;
+}
+
+.justify {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .white {

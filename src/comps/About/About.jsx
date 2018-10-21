@@ -15,18 +15,18 @@ class about extends React.Component {
         this.setState({
             [`${str}pic`]: require(`../../assets/${e}.png`)
         })
-        console.log(this.state)
     }
     render() {
         return (
             <Element name='about'>
                 <div className='outer-container light'>
-                    <h2 className='element-name'>-About-</h2>
+                    <h2 className='element-name'>About</h2>
                     <div className='container'>
                         <span
                             className='self'
                             onMouseOver={() => this.mouseEvent('selfie2')}
                             onMouseOut={() => this.mouseEvent('selfie1')}
+                            onClick={()=>this.mouseEvent('selfie3')}
                         >
                             <CrossfadeImage
                                 src={this.state.selfiepic}
@@ -34,7 +34,7 @@ class about extends React.Component {
                                 style={this.state.style}
                             />
                         </span>
-                        <p style={{ color: 'black' }}>
+                        <p style={{ color: 'black', padding: '0 10px' }}>
                             I love to learn and love to code. I am always looking for new projects to work on in order to gain experience and learn new technologies. 
                         </p>
                     </div>

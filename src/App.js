@@ -4,7 +4,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHome, faUserCircle, faJournalWhills, faComments } from '@fortawesome/free-solid-svg-icons'
 import Home from './comps/Home/Home';
 import About from './comps/About/About';
-import Portfolio from './comps/Portfolio/Portfolio'
+import Portfolio from './comps/Portfolio/Portfolio';
+import Contact from './comps/Contact/Contact'
 
 library.add(faHome, faUserCircle, faJournalWhills, faComments)
 
@@ -27,12 +28,14 @@ class App extends React.Component {
           <img src={require('./assets/bloggyblog2ss.png')} alt="" />
           <img src={require('./assets/selfie1.png')} alt="" />
           <img src={require('./assets/selfie2.png')} alt="" />
+          <img src={require('./assets/selfie3.png')} alt="" />
           <img src={require('./assets/icon.png')} alt=""/>
         </div>
         <Menu />
         <Home id='home' />
         <About />
         <Portfolio />
+        <Contact/>
       </div>
     );
   }
